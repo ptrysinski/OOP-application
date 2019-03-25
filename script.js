@@ -1,3 +1,13 @@
+let inputValue = document.querySelector('input').value
+
+inputValue.addEventListener(
+    'input',
+    event => this.inputValue = Number(event.target.value)
+)
+
+
+
+
 const sum = function (array){
     let sum = 0
     sum = array.reduce((x, y) => x+y)
@@ -9,7 +19,7 @@ const avg = function (array){
 }
 
 const sortArray = function (array){
-    let sortedArray = array.sort(function(x,y){
+    let sortedArray = array.concat().sort(function(x,y){
         return x-y;
     });
     return sortedArray
