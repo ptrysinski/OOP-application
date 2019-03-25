@@ -38,3 +38,15 @@ const maxValue = function (array){
     const sortedArray = sortArray(array)
     return sortedArray[sortedArray.length - 1]
 }
+
+const results = function (array){
+    
+    let result = {
+        average: avg(array),
+        medianArray: median(array),
+        minimum: minValue(array),
+        maximum: maxValue(array),
+    }
+
+    return result
+}
