@@ -1,9 +1,37 @@
-let inputValue = document.querySelector('input').value
+let inputNumber
+let myArray = []
+let error = ''
 
-inputValue.addEventListener(
-    'input',
-    event => this.inputValue = Number(event.target.value)
-)
+document.querySelector('.add').addEventListener('click', function() {
+
+    inputNumber = document.querySelector('input').value
+
+    if (inputNumber !== '') {
+
+        document.querySelector('input').value = ''
+
+        myArray.push(inputNumber)
+        
+        console.log(myArray)
+
+    } else {
+    
+        error = 'Musisz podać jakiś element, nie ma nic do dodania!';
+    
+        alert(error);
+    }
+
+});
+
+document.querySelector('.resolve').addEventListener('click', function() {
+    
+    let resolvedArray = results(myArray)
+
+    document.querySelector('p').innerHTML = resolvedArray
+
+    console.log(resolvedArray)
+    return resolvedArray
+})
 
 
 
